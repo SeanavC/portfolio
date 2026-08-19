@@ -56,9 +56,25 @@ export default function ProjectCard({
             className="overflow-hidden"
           >
             <div className="grid gap-6 pb-8 pl-0 sm:pl-12 md:grid-cols-[2fr_1fr]">
-              <p className="text-balance text-sm leading-relaxed text-slate sm:text-base">
-                {project.detail}
-              </p>
+              <div className="space-y-4">
+                <p className="text-balance text-sm leading-relaxed text-slate sm:text-base">
+                  {project.detail}
+                </p>
+
+                {project.highlights && (
+                  <ul className="space-y-2.5">
+                    {project.highlights.map((item) => (
+                      <li
+                        key={item}
+                        className="flex gap-3 text-sm leading-relaxed text-slate"
+                      >
+                        <span className="mt-0.5 shrink-0 font-mono text-accent">—</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
 
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">

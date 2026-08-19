@@ -6,6 +6,7 @@ export type Project = {
   period: string;
   summary: string;
   detail: string;
+  highlights?: string[];
   stack: string[];
   links?: { label: string; href: string }[];
   kind: "code" | "case-study";
@@ -54,8 +55,16 @@ export const PROJECTS: Project[] = [
     summary:
       "A year-long placement spanning AI rollout, data governance, and live e-commerce — including a $3.5M+ product drop with zero tolerance for downtime.",
     detail:
-      "Standardised MattelPaedia, Mattel's internal business glossary, resolving terminology overlaps and structuring definitions in Collibra to support scalable data governance. Built and maintained Mattel Creations' UK/DE storefronts in Liquid/JS, including custom APIs and Klaviyo integration. Validated backend JSON logs and Shopify distribution signals to protect data integrity for the Hot Wheels Overdrive subscription service through bi-weekly drops. Solo-delivered Mattel's EMEA Town Hall on MattelGPT after a co-presenter fell ill — introduced by the EMEA lead — helping drive adoption of the internal AI platform regionally.",
-    stack: ["Data Governance", "Liquid / JS", "Shopify", "Collibra", "Klaviyo"],
+      "A year embedded in Mattel's EMEA digital team, shipping across e-commerce, AI adoption, internal tooling, and data governance in Agile sprints alongside product managers and QA.",
+    highlights: [
+      "Played a key role in the setup and end-to-end testing of UK & DE Mattel Creations, the DTC collector platforms — building region-specific storefronts with AI-powered translations, custom JavaScript/HTML/CSS elements, and pre-order functionality.",
+      "Contributed to Agile sprint development in JavaScript, CSS, HTML, and Shopify JSON/Liquid configuration, collaborating with product managers on feature rollouts and QA on ticket testing.",
+      "Facilitated the EMEA rollout of MattelGPT, Mattel's internal AI — demoing to regional markets and supporting adoption across departments, including solo-delivering the EMEA Town Hall demo after a co-presenter fell ill.",
+      "Supported the 2025 Hot Wheels Overdrive launch — product setup, subscription model configuration, and bi-weekly drop analysis for a $3.5M+ subscription service.",
+      "Implemented a booking system automating HR executive scheduling, saving 150+ hours of admin time for leadership career sessions.",
+      "Led the technical mapping of MattelPaedia, the company's internal business glossary, into Collibra — enabling scalable data governance documentation.",
+    ],
+    stack: ["JavaScript", "Liquid", "Shopify", "Collibra", "Klaviyo", "Data Governance"],
     kind: "case-study",
   },
   {
