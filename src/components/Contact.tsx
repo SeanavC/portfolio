@@ -1,10 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { LINKS } from "@/lib/data";
 
-const CONTACTS = [
-  { label: "Email", value: LINKS.email, href: `mailto:${LINKS.email}` },
+const SOCIALS = [
   { label: "GitHub", value: "github.com/SeanavC", href: LINKS.github },
   {
     label: "LinkedIn",
@@ -14,6 +14,18 @@ const CONTACTS = [
 ];
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(LINKS.email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard unavailable (e.g. non-secure context) — select nothing, fail quietly
+    }
+  };
+
   return (
     <section id="contact" className="relative px-5 py-28 sm:px-8">
       <div className="mx-auto max-w-6xl">
@@ -37,16 +49,43 @@ export default function Contact() {
         </motion.h2>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-          {CONTACTS.map((c, i) => (
+          <motion.button
+            type="button"
+            onClick={copyEmail}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="group flex items-center justify-between gap-8 rounded-2xl border border-black/10 px-6 py-4 text-left transition-colors hover:border-accent dark:border-white/10 sm:min-w-[280px]"
+            aria-label={`Copy email address ${LINKS.email}`}
+          >
+            <span>
+              <span className="block font-mono text-xs text-slate">Email</span>
+              <span className="mt-1 block font-display text-base">
+                {LINKS.email}
+              </span>
+            </span>
+            <span
+              className={
+                copied
+                  ? "font-mono text-xs text-accent"
+                  : "font-mono text-xs text-slate opacity-0 transition-opacity group-hover:opacity-100"
+              }
+            >
+              {copied ? "Copied ✓" : "Copy"}
+            </span>
+          </motion.button>
+
+          {SOCIALS.map((c, i) => (
             <motion.a
               key={c.label}
               href={c.href}
-              target={c.href.startsWith("http") ? "_blank" : undefined}
+              target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
+              transition={{ duration: 0.5, delay: (i + 1) * 0.08 }}
               className="group flex items-center justify-between gap-8 rounded-2xl border border-black/10 px-6 py-4 transition-colors hover:border-accent dark:border-white/10 sm:min-w-[280px]"
             >
               <span>
