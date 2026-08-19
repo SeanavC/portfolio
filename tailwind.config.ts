@@ -15,9 +15,9 @@ const config: Config = {
           light: "#EFEDE7",
         },
         accent: {
-          DEFAULT: "#7C5CFF",
-          dim: "#5A3FE0",
-          soft: "#B7A6FF",
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          dim: "rgb(var(--accent-dim) / <alpha-value>)",
+          soft: "rgb(var(--accent-soft) / <alpha-value>)",
         },
         slate: {
           DEFAULT: "#8B8A99",
@@ -31,7 +31,7 @@ const config: Config = {
       },
       backgroundImage: {
         "grid-pattern":
-          "linear-gradient(to right, rgba(124,92,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(124,92,255,0.06) 1px, transparent 1px)",
+          "linear-gradient(to right, rgb(var(--accent) / 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgb(var(--accent) / 0.06) 1px, transparent 1px)",
       },
       keyframes: {
         fadeIn: {

@@ -4,6 +4,17 @@
 
 :root {
   color-scheme: dark;
+  /* Light mode: white + orange accent (deepened slightly from Claude's #D97757 for contrast on white) */
+  --accent: 172 79 43;
+  --accent-dim: 140 62 32;
+  --accent-soft: 224 150 110;
+}
+
+html.dark {
+  /* Dark mode: black + purple, unchanged */
+  --accent: 124 92 255;
+  --accent-dim: 90 63 224;
+  --accent-soft: 183 166 255;
 }
 
 html {
@@ -16,7 +27,7 @@ html.dark body {
 }
 
 html:not(.dark) body {
-  background-color: #f7f6f3;
+  background-color: #ffffff;
   color: #16151f;
 }
 
@@ -26,7 +37,7 @@ body {
 }
 
 ::selection {
-  background: #7c5cff;
+  background: rgb(var(--accent));
   color: #ffffff;
 }
 
@@ -37,11 +48,11 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #7c5cff55;
+  background: rgb(var(--accent) / 0.33);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c5cff99;
+  background: rgb(var(--accent) / 0.6);
 }
 
 .text-balance {

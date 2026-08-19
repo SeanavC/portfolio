@@ -66,8 +66,8 @@ export default function NodeField() {
       const isDark = document.documentElement.classList.contains("dark");
       ctx.clearRect(0, 0, width, height);
 
-      const dotColor = isDark ? "124,92,255" : "90,63,224";
-      const lineColor = isDark ? "124,92,255" : "90,63,224";
+      const dotColor = isDark ? "124,92,255" : "140,62,32";
+      const lineColor = isDark ? "124,92,255" : "140,62,32";
 
       for (const n of nodes) {
         n.x += n.vx;
