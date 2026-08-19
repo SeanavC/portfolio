@@ -47,29 +47,86 @@ export const PROJECTS: Project[] = [
     kind: "code",
   },
   {
-    id: "mattel",
+    id: "mattel-creations",
     index: "03",
-    name: "Data Governance & Commerce Infrastructure",
+    name: "Mattel Creations — UK & DE Storefronts",
     role: "Software & Digital IT Intern — Mattel EMEA",
     period: "Jul 2024 – Jul 2025",
     summary:
-      "A year-long placement spanning AI rollout, data governance, and live e-commerce — including a $3.5M+ product drop with zero tolerance for downtime.",
+      "Full-stack development of Mattel's UK & DE Creations DTC storefronts, from setup and testing through live Agile sprints.",
     detail:
-      "A year embedded in Mattel's EMEA digital team, shipping across e-commerce, AI adoption, internal tooling, and data governance in Agile sprints alongside product managers and QA.",
-    highlights: [
-      "Played a key role in the setup and end-to-end testing of UK & DE Mattel Creations, the DTC collector platforms — building region-specific storefronts with AI-powered translations, custom JavaScript/HTML/CSS elements, and pre-order functionality.",
-      "Contributed to Agile sprint development in JavaScript, CSS, HTML, and Shopify JSON/Liquid configuration, collaborating with product managers on feature rollouts and QA on ticket testing.",
-      "Facilitated the EMEA rollout of MattelGPT, Mattel's internal AI — demoing to regional markets and supporting adoption across departments, including solo-delivering the EMEA Town Hall demo after a co-presenter fell ill.",
-      "Supported the 2025 Hot Wheels Overdrive launch — product setup, subscription model configuration, and bi-weekly drop analysis for a $3.5M+ subscription service.",
-      "Implemented a booking system automating HR executive scheduling, saving 150+ hours of admin time for leadership career sessions.",
-      "Led the technical mapping of MattelPaedia, the company's internal business glossary, into Collibra — enabling scalable data governance documentation.",
-    ],
-    stack: ["JavaScript", "Liquid", "Shopify", "Collibra", "Klaviyo", "Data Governance"],
+      "Played a key role in the setup and end-to-end testing of UK & DE Mattel Creations, Mattel's direct-to-consumer collector platforms — building region-specific storefronts with AI-powered translations, custom JavaScript/HTML/CSS, and pre-order functionality. Delivered as part of Agile sprint teams, writing JavaScript, CSS, and HTML, and configuring Shopify storefronts through JSON and Liquid, collaborating with product managers on feature rollouts and QA on ticket testing.",
+    stack: ["JavaScript", "Liquid", "Shopify", "HTML / CSS", "Agile"],
+    kind: "case-study",
+  },
+  {
+    id: "rlc-overdrive",
+    index: "04",
+    name: "RLC Overdrive Members Club",
+    role: "Software & Digital IT Intern — Mattel EMEA",
+    period: "Jul 2024 – Jul 2025",
+    summary:
+      "Full-stack development, business analysis, and bug-hunting on Mattel's $3.5M+ Hot Wheels Overdrive subscription platform.",
+    detail:
+      "Supported the 2025 Hot Wheels Overdrive launch across the stack — assisting product setup, configuring the subscription model, and validating backend JSON logs and Shopify distribution signals to protect data integrity through bi-weekly drops. Combined hands-on development with business analysis and QA, surfacing and resolving bugs ahead of a $3.5M+ subscription service going live.",
+    stack: ["JSON", "Shopify", "Business Analysis", "QA / Bug Triage"],
+    kind: "case-study",
+  },
+  {
+    id: "mattelgpt",
+    index: "05",
+    name: "MattelGPT EMEA Rollout",
+    role: "Software & Digital IT Intern — Mattel EMEA",
+    period: "Jul 2024 – Jul 2025",
+    summary:
+      "Drove EMEA adoption of Mattel's internal AI platform — demoing to regional markets and solo-delivering the UK Town Hall.",
+    detail:
+      "Facilitated the EMEA rollout of MattelGPT, Mattel's internal AI platform, demoing to regional markets and supporting adoption across departments. When the senior business lead scheduled to present fell ill on adoption day, stepped in to solo-deliver the UK office Town Hall as an intern.",
+    stack: ["AI Adoption", "Stakeholder Demos", "Change Enablement"],
+    kind: "case-study",
+  },
+  {
+    id: "hr-booking",
+    index: "06",
+    name: "HR Booking System",
+    role: "Software & Digital IT Intern — Mattel EMEA",
+    period: "Jul 2024 – Jul 2025",
+    summary:
+      "Automated HR executive scheduling for career mentorship sessions, saving 150+ hours of admin time a year at zero added cost.",
+    detail:
+      "Built a Microsoft Bookings configuration to automate scheduling for 1:1 mentorship sessions between employees and senior business leads, replacing manual admin coordination. Saved the HR team over 150 hours of admin time annually, running on a license Mattel already held — so at no added cost.",
+    stack: ["Microsoft Bookings", "Process Automation", "HR Systems"],
+    kind: "case-study",
+  },
+  {
+    id: "mattel-governance",
+    index: "07",
+    name: "Data Governance — MattelPaedia → Collibra",
+    role: "Software & Digital IT Intern — Mattel EMEA",
+    period: "Jul 2024 – Jul 2025",
+    summary:
+      "Led the technical migration of Mattel's internal business glossary into Collibra, enabling scalable data governance documentation.",
+    detail:
+      "Led the technical mapping of MattelPaedia, Mattel's internal business glossary, into Collibra — resolving terminology overlaps and structuring definitions to support scalable data governance documentation across the business.",
+    stack: ["Collibra", "Data Governance"],
+    kind: "case-study",
+  },
+  {
+    id: "pnl-analysis",
+    index: "08",
+    name: "Historical P&L Discrepancy Analysis",
+    role: "Software & Digital IT Intern — Mattel EMEA",
+    period: "Jul 2024 – Jul 2025",
+    summary:
+      "Reviewed historical Profit & Loss records to identify and flag data discrepancies using Excel and SQL.",
+    detail:
+      "Analysed historical Profit & Loss records to identify discrepancies against source data, using Excel for reconciliation and SQL to query and cross-check the underlying financial data.",
+    stack: ["Excel", "SQL", "Financial Analysis"],
     kind: "case-study",
   },
   {
     id: "freelance",
-    index: "04",
+    index: "09",
     name: "Freelance — Trade Business Site",
     role: "Independent Client Work",
     period: "2025 – present",
@@ -79,6 +136,20 @@ export const PROJECTS: Project[] = [
       "Designed, built, and deployed a Next.js site on Vercel with CD wired to Git push/pull, so client-requested changes ship without manual deploys. Implemented on-page SEO — metadata, semantic structure, page speed — to improve local search visibility for trade services in the client's coverage area.",
     stack: ["React", "Next.js", "Vercel", "SEO"],
     kind: "code",
+  },
+  {
+    id: "embers-eve",
+    index: "10",
+    name: "Embers Eve Productions",
+    role: "Freelance — Wix Development",
+    period: "2025",
+    summary:
+      "A Wix site for a friend's theatre production company, with Buy Me a Coffee donation integration.",
+    detail:
+      "Designed and built the website for Embers Eve Productions, a theatre production company, on Wix — including a Buy Me a Coffee integration so the company could accept donations directly through the site.",
+    stack: ["Wix", "Buy Me a Coffee"],
+    links: [{ label: "Live Site", href: "https://www.embereveproductions.com/" }],
+    kind: "case-study",
   },
 ];
 

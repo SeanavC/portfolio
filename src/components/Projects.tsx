@@ -26,7 +26,7 @@ export default function Projects() {
           viewport={{ once: true }}
           className="mb-4 max-w-2xl text-balance font-display text-3xl font-medium sm:text-4xl"
         >
-          Four things I&apos;ve shipped or shaped.
+          Things I&apos;ve shipped or shaped.
         </motion.h2>
 
         <div className="mt-10 border-t border-black/10 dark:border-white/10">
