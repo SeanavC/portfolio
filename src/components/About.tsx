@@ -33,7 +33,7 @@ export default function About() {
             I enjoy working across the full lifecycle of a data or software system — from
             ingesting and modelling data through to building and deploying the services that run
             on it. A year at Mattel EMEA took me through AI rollout, data governance, and
-            e-commerce infrastructure supporting a $3.5M+ product line; now I'm building ML
+            e-commerce infrastructure supporting a $3.5M+ product line; now I&apos;m building ML
             systems of my own and looking for where to point that next, full-time.
           </motion.p>
 
